@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:contentDescription="@string/ArrowBackDesc"
+            android:src="@drawable/arrow_back"
+            android:focusable="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/hotelsHeadline"
+            android:textColor="@color/pinkClr"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/menuBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:contentDescription="@string/SandwichBtnDesc"
+            android:src="@drawable/sandwich_menu"
+            android:focusable="true" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@drawable/sunkiss_pool"
+        android:contentDescription="@string/imageHotel" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/imageView">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/pinkClr"
+            android:text="@string/hotelName"
+            />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:stepSize="1"
+            android:numStars="5"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:contentDescription="@string/ratingBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/loremScrollSV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:justificationMode="inter_word"
+                android:text="@string/descriptionLorem"
+                android:textColor="@color/pinkClr"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/vectorIconsLL"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loremScrollSV"
+        >
+
+        <ImageView
+            android:id="@+id/umbrellaIV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/ArrowBackDesc"
+            android:src="@drawable/umbrella_icon"/>
+
+        <ImageView
+            android:id="@+id/wifiIV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/SandwichBtnDesc"
+            android:src="@drawable/wifi_icon"/>
+
+        <ImageView
+            android:id="@+id/restaurantIV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:contentDescription="@string/SandwichBtnDesc"
+            android:src="@drawable/restaurant_icon"
+            android:focusable="true" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/reservationBtn"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/pinkClr"
+        android:text="@string/reservationBtn"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vectorIconsLL" />
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="300dp"
+        android:layout_height="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/ic_separator"
+        app:layout_constraintTop_toBottomOf="@+id/reservationBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

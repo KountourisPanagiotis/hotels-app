@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">HotelsApp</string>
+    <string name="hotelsHeadline">Hotels</string>
+    <string name="hotelName">Super Hotel</string>
+    <string name="descriptionLorem">Contrary to popular belief, Lorem ipsum is not simply random text.It has roots in a piece of classical Latin literature from 45BC, making it over 2000 years old. Richard McClintock, a Latin professorr at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, for a Lorem Ipsum passage, source.Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum </string>
+    <string name="reservationBtn">MAKE RESERVATION</string>
+
+<!--    Descriptions-->
+    <string name="ArrowBackDesc">Back Arrow</string>
+    <string name="SandwichBtnDesc">Sandwich Menu Button</string>
+    <string name="ratingBar">Rating Bar</string>
+    <string name="imageHotel">SunKiss_Pool</string>
+</resources>
